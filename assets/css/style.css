@@ -1,0 +1,152 @@
+/* Reset and base styles */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header h1 a {
+  text-decoration: none;
+}
+
+/* Links */
+a {
+  color: #fe386e;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Articles and posts */
+article {
+  margin: 30px 0;
+}
+
+article header {
+  text-align: left;
+  border-bottom: none;
+  margin-bottom: 20px;
+  padding-bottom: 0;
+}
+
+article h1 {
+  margin-bottom: 10px;
+  color: #222;
+}
+
+article time {
+  color: #666;
+  font-size: 0.9em;
+}
+
+/* Home page post list */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 15px 0;
+  padding: 15px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+li span {
+  color: #666;
+  font-size: 0.9em;
+  margin-left: 10px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  color: #666;
+  font-size: 0.9em;
+}
+
+/* Post navigation */
+.post-nav {
+  margin-bottom: 30px;
+}
+
+.post-nav a {
+  display: inline-block;
+  padding: 8px 16px;
+  background: #f8f8f8;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.post-nav a:hover {
+  background: #fe386e;
+  color: white;
+  text-decoration: none;
+}
+
+/* Featured posts */
+.featured-posts {
+  margin-bottom: 50px;
+}
+
+.featured-posts .featured {
+  background: #fff8fa;
+  border: 1px solid #fe386e;
+  border-radius: 8px;
+  padding: 25px;
+  margin: 25px 0;
+}
+
+.featured-posts .featured header {
+  margin-bottom: 15px;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.featured-posts .featured h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.2em;
+}
+
+.featured-posts .featured h3 a {
+  color: #222;
+}
+
+.featured-posts .featured time {
+  color: #666;
+  font-size: 0.9em;
+}
+
+.featured-posts .featured .excerpt {
+  color: #555;
+  line-height: 1.5;
+  margin: 15px 0;
+}
+
+.featured-posts .featured .read-more {
+  font-weight: 500;
+  font-size: 0.95em;
+}

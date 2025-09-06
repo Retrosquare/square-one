@@ -1,0 +1,37 @@
+---
+layout: default
+---
+<div>
+  {{ content }}
+
+  {% assign featured_posts = site.posts | where: "featured", true %}
+  {% if featured_posts.size > 0 %}
+  <div class="featured-posts">
+    {% for post in featured_posts limit:3 %}
+    <article class="featured">
+      <header>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <time>{{ post.date | date: "%B %d, %Y" }}</time>
+      </header>
+      <div class="excerpt">
+        {{ post.excerpt | strip_html | truncatewords: 30 }}
+      </div>
+      <a href="{{ post.url | relative_url }}" class="read-more">Read more...</a>
+    </article>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% assign recent_posts = site.posts | where_exp: "post", "post.featured != true" %}
+  {% if recent_posts.size > 0 %}
+  <h2>Recent Posts</h2>
+  <ul>
+    {% for post in recent_posts %}
+    <li>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      <span>{{ post.date | date: "%B %d, %Y" }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+</div>
