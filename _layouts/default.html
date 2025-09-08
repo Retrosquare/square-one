@@ -21,6 +21,10 @@
 
   <body>
     <header>
+      <nav class="top">
+        <a href="{{ '/authors/' | relative_url }}">Authors</a> |
+        <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+      </nav>
       <h1>
         <a href="{{ '/' | relative_url }}">
           <img
@@ -30,10 +34,6 @@
           />
         </a>
       </h1>
-      <nav>
-        <a href="{{ '/authors/' | relative_url }}">Authors</a>
-        <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
-      </nav>
     </header>
 
     <main>{{ content }}</main>
