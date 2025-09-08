@@ -1,29 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="{{ site.description }}" />
+    <title>
+      {% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}
+    </title>
+    <link
+      rel="stylesheet"
+      href="{{ '/assets/css/style.css' | relative_url }}"
+    />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="{{ site.description }}">
-  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-</head>
+  <body>
+    <header>
+      <h1>
+        <a href="{{ '/' | relative_url }}">
+          <img
+            src="/assets/images/blog-logo.svg"
+            alt="{{ site.title }}"
+            style="height: 64px"
+          />
+        </a>
+      </h1>
+      <nav>
+        <a href="{{ '/authors/' | relative_url }}">Authors</a>
+      </nav>
+    </header>
 
-<body>
-  <header>
-    <h1><a href="{{ '/' | relative_url }}">
-        <img src="/assets/images/blog-logo.svg" alt="{{ site.title }}" style="height: 64px;">
-      </a></h1>
-  </header>
+    <main>{{ content }}</main>
 
-  <main>
-    {{ content }}
-  </main>
-
-  <footer>
-    <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }} | <a href="https://retrosquare.com">Visit
-        Retrosquare.com</a></p>
-  </footer>
-</body>
-
+    <footer>
+      <p>
+        &copy; {{ site.time | date: '%Y' }} {{ site.title }} |
+        <a href="https://retrosquare.com">Visit Retrosquare.com</a>
+      </p>
+    </footer>
+  </body>
 </html>

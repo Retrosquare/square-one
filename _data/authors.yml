@@ -1,0 +1,7 @@
+ebn:
+  name: "E Brent Nelson"
+  bio: "Principal Software Engineer specializing in enterprise architecture and team leadership. Technical expert in functional programming and web development, with experience across healthcare, recruiting, and gaming industries. Currently drives healthcare technology initiatives while teaching as adjunct faculty at BYU-I."
+  avatar: "/assets/images/authors/ebn.png"
+  email: "ebrentnelson@gmail.com"
+  website: "https://ebrentnelson.com"
+  specialties: "Clojure, System Architecture, API Design, Web Applications"

@@ -1,13 +1,37 @@
 ---
 layout: default
 ---
+
 <nav class="post-nav">
   <a href="{{ '/' | relative_url }}">&larr; Back to Blog</a>
 </nav>
 <article>
+  {% if page.featured_image %}
+  <div class="post-featured-image">
+    <img
+      src="{{ page.featured_image | relative_url }}"
+      alt="{{ page.title }}"
+    />
+  </div>
+  {% endif %}
   <header>
     <h1>{{ page.title }}</h1>
     <time>{{ page.date | date: "%B %d, %Y" }}</time>
+    {% if page.author %} {% assign author = site.data.authors[page.author] %}
+    <div class="author-info">
+      <img
+        src="{{ author.avatar | relative_url }}"
+        alt="{{ author.name }}"
+        class="author-avatar"
+      />
+      <span
+        >by
+        <a href="{{ '/authors/' | append: page.author | relative_url }}"
+          >{{ author.name }}</a
+        ></span
+      >
+    </div>
+    {% endif %}
   </header>
   {{ content }}
 </article>

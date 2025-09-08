@@ -1,0 +1,21 @@
+---
+layout: default
+title: Authors
+permalink: /authors/
+---
+
+<h1>Authors</h1>
+
+{% for author_data in site.data.authors %} {% assign author_key = author_data[0]
+%} {% assign author = author_data[1] %}
+<div class="author-card">
+  <img src="{{ author.avatar | relative_url }}" alt="{{ author.name }}" class="author-avatar-large" />
+  <div class="author-details">
+    <h2>
+      <a href="{{ author.website }}">{{ author.name }}</a>
+    </h2>
+    <p>{{ author.bio }}</p>
+    <p><strong>Specialties:</strong> {{ author.specialties }}</p>
+  </div>
+</div>
+{% endfor %}

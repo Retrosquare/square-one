@@ -2,7 +2,8 @@
 layout: post
 title: "Welcome to Square One"
 date: 2025-09-05
-featured: true
+featured: false
+author: ebn
 ---
 
 Welcome to Square One, the official blog of Retrosquare. This is where we'll be sharing our journey of using technology to make the world a better place, one thoughtful application at a time.
