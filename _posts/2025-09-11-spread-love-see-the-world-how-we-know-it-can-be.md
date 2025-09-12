@@ -8,7 +8,7 @@ featured_image: /assets/images/posts/coexisting-in-friendship.png
 ---
 Recent events have left me reflecting on how far we've drifted from being able to simply coexist with people who think differently than us. What happened in the last 24 hours—and really, what's been building over the past couple of years—shows a troubling reality: we've become so polarized that we can't live with each other anymore.
 
-<!-- more -->
+<!--more-->
 
 It's heartbreaking to see that people can no longer handle the fact that others have different opinions, beliefs, political affiliations, religions, or identities. This shouldn't be how things are. As human beings, we should be able to hold our own convictions while respecting the perspectives of others, regardless of our differences.
 
