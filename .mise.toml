@@ -1,0 +1,14 @@
+[tools]
+ruby = "3.1"
+
+[tasks.install]
+description = "Install gem dependencies"
+run = "bundle install"
+
+[tasks.serve]
+description = "Serve the site locally with live reload"
+run = "bundle exec jekyll serve --livereload"
+
+[tasks.build]
+description = "Build the site"
+run = "bundle exec jekyll build"

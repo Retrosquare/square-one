@@ -69,26 +69,22 @@ article time {
 }
 
 /* Home page post list */
-.home ul,
-.featured-posts ul {
+.home ul {
   list-style: none;
   padding: 0;
 }
 
-.home li,
-.featured-posts li {
+.home li {
   margin: 15px 0;
   padding: 15px 0;
   border-bottom: 1px solid #f0f0f0;
 }
 
-.home li:last-child,
-.featured-posts li:last-child {
+.home li:last-child {
   border-bottom: none;
 }
 
-.home li span,
-.featured-posts li span {
+.home li span {
   color: #666;
   font-size: 0.9em;
   margin-left: 10px;
@@ -123,48 +119,137 @@ footer {
   text-decoration: none;
 }
 
-/* Featured posts */
-.featured-posts {
-  margin-bottom: 50px;
-}
-
-.featured-posts .featured:first-of-type {
-  background: #fff8fa;
-  border: 1px solid #fe386e;
+/* Hero post */
+.hero-post {
+  margin-bottom: 40px;
+  border: 1px solid #eee;
   border-radius: 8px;
-  padding: 25px;
-  margin: 25px 0;
+  overflow: hidden;
 }
 
-.featured-posts .featured header {
-  margin-bottom: 15px;
-  border-bottom: none;
-  padding-bottom: 0;
+.hero-image {
+  margin-bottom: 0;
 }
 
-.featured-posts .featured h3 {
-  margin: 0 0 8px 0;
-  font-size: 1.2em;
+.hero-image img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+  display: block;
+  margin: 0;
 }
 
-.featured-posts .featured h3 a {
+.hero-content {
+  padding: 25px 30px;
+}
+
+.hero-content h2 {
+  margin: 0 0 6px 0;
+  font-size: 1.6em;
+}
+
+.hero-content h2 a {
   color: #222;
 }
 
-.featured-posts .featured time {
+.hero-content time {
   color: #666;
   font-size: 0.9em;
 }
 
-.featured-posts .featured .excerpt {
+.hero-content .excerpt {
   color: #555;
-  line-height: 1.5;
-  margin: 15px 0;
+  line-height: 1.6;
+  margin: 14px 0;
 }
 
-.featured-posts .featured .read-more {
+.hero-content .read-more {
   font-weight: 500;
   font-size: 0.95em;
+}
+
+/* Secondary featured grid */
+.secondary-featured-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.secondary-featured {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.secondary-featured .featured-image {
+  margin-bottom: 0;
+}
+
+.secondary-featured .featured-image img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 0;
+  display: block;
+  margin: 0;
+}
+
+.secondary-featured h3 {
+  margin: 14px 16px 4px;
+  font-size: 1.05em;
+}
+
+.secondary-featured h3 a {
+  color: #222;
+}
+
+.secondary-featured time {
+  display: block;
+  margin: 0 16px;
+  color: #666;
+  font-size: 0.85em;
+}
+
+.secondary-featured .excerpt {
+  margin: 10px 16px;
+  color: #555;
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+.secondary-featured .read-more {
+  display: inline-block;
+  margin: 0 16px 16px;
+  font-weight: 500;
+  font-size: 0.9em;
+}
+
+/* Recent posts list */
+.recent-posts-heading {
+  margin-bottom: 10px;
+}
+
+.recent-posts-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.recent-posts-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.recent-posts-list li:last-child {
+  border-bottom: none;
+}
+
+.recent-posts-list li span {
+  color: #666;
+  font-size: 0.9em;
+  margin-left: 10px;
 }
 
 /* Author info */
@@ -230,4 +315,86 @@ article img {
   width: 100%;
   height: auto;
   border-radius: 8px;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  body {
+    padding: 12px;
+  }
+
+  header {
+    margin-bottom: 24px;
+  }
+
+  article {
+    margin: 0;
+  }
+
+  .hero-post {
+    border: none;
+    border-radius: 0;
+    margin-bottom: 12px;
+  }
+
+  .hero-image img {
+    height: 210px;
+    border-radius: 0;
+  }
+
+  .hero-content {
+    padding: 12px 0;
+  }
+
+  .hero-content h2 {
+    font-size: 1.25em;
+  }
+
+  .secondary-featured-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .secondary-featured {
+    border: none;
+    border-radius: 0;
+  }
+
+  .secondary-featured .featured-image img {
+    height: 180px;
+    border-radius: 0;
+  }
+
+  .secondary-featured h3 {
+    margin: 10px 0 4px;
+  }
+
+  .secondary-featured time {
+    margin: 0;
+  }
+
+  .secondary-featured .excerpt {
+    margin: 8px 0;
+  }
+
+  .secondary-featured .read-more {
+    margin: 0 0 12px;
+  }
+
+  .recent-posts-list li span {
+    display: block;
+    margin-left: 0;
+    margin-top: 2px;
+  }
+
+  .author-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .author-avatar-large {
+    margin-right: 0;
+    margin-bottom: 12px;
+  }
 }
